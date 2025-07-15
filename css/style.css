@@ -4,8 +4,8 @@ body {
     margin: 0px;
     background-color: #859cc7;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 150px 1fr min-content;
 }
 
 body * {
@@ -26,32 +26,31 @@ header h1 {
 }
 
 .page-layout {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 200px 1fr;
 }
 
 @media (max-width: 768px) {
     .page-layout {
-        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: auto 1fr;
     }
 }
 
 nav {
-    width: 200px;
-
     background-color: #b3c8e8;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
 }
 
 @media (max-width: 768px) {
     nav {
         width: 100%;
 
-        flex-direction: row;
         justify-content: center;
+        grid-template-rows: none;
+        grid-template-columns: min-content min-content min-content min-content;
 
         padding: 10px;
     }
@@ -59,8 +58,9 @@ nav {
 
 @media (max-width: 425px) {
     nav {
-        flex-direction: column;
         padding: 0px;
+        justify-content: inherit;
+        grid-template-columns: none;
     }
 }
 
@@ -108,9 +108,8 @@ nav {
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
 
     background-color: white;
     color: black;
@@ -119,7 +118,7 @@ main {
 
 @media (max-width: 768px) {
     main {
-        flex-direction: column;
+        grid-template-columns: inherit;
         padding: 16px;
     }
 }
