@@ -1,0 +1,176 @@
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0px;
+    background-color: #859cc7;
+
+    display: flex;
+    flex-direction: column;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    height: 150px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+.page-layout {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .page-layout {
+        flex-direction: column;
+    }
+}
+
+nav {
+    width: 200px;
+
+    background-color: #b3c8e8;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    nav {
+        flex-direction: column;
+        padding: 0px;
+    }
+}
+
+.nav-item {
+    background-color: #e0b6cd;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 768px) and (min-width: 425px) {
+    .nav-item {
+        border: none;
+
+        margin-right: 20px;
+    }
+    
+    .nav-item:last-child {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    .nav-item {
+        border-bottom: 1px solid white;
+        margin: 0px;
+        background-color: #b3c8e8;
+    }
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item a:hover {
+    color: inherit;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    background-color: white;
+    color: black;
+    padding: 24px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 16px;
+    }
+}
+
+main > * {
+    padding-right: 10px;
+}
+
+main > *:last-child {
+    padding-right: 0px;
+}
+
+@media (max-width: 768px) {
+    main > * {
+        padding-bottom: 10px;
+    }
+
+    main > *:last-child {
+        padding-bottom: 0px;
+    }
+}
+
+main img {
+    max-width: 300px;
+    width: 100%;
+    height: max-content;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+}
+
+section h2 {
+    color: #b3c8e8;
+}
+
+@media (max-width: 425px) {
+    h2 {
+        margin: 4px;
+    }
+    p {
+        margin: 4px;
+    }
+}
+
+footer {
+    color:#00025e;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
